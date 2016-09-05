@@ -9,5 +9,6 @@ import { Hero } from './hero';
 
 //the name below is arbitrary
 export class HeroDetailComponent {
-
+  @Input()
+  hero: Hero;
 }
