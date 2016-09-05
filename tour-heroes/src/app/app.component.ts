@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 export class Hero {
-  id: number,
+  id: number;
   name: string;
 }
 
