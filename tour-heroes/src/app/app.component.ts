@@ -12,12 +12,14 @@ import { OnInit } from '@angular/core';
 
 export class AppComponent implements OnInit {
   title = 'Tour of Heroes!';
-  selectedHero: Hero;
-  constructor(private heroService: HeroService){}
+
   heroes: Hero[];
+  selectedHero: Hero;
+
+  constructor(private heroService: HeroService){}
 
   getHeroes(): void {
-    this.heroes = this.heroService.getHeroes();
+    this.heroService.getHeroes().then(heroes => this.heroes = heroes);
   }
 
   onSelect(hero: Hero): void {
